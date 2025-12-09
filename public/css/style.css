@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family:  "Varela Round",sans-serif;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --mian-bg:#1e272e;
+    --main-color:#0097e6;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    margin: 0;
+}
+
+.main_menu{
+    background-color:var(--mian-bg);
+
+}
+
+.navbar{
+    color:#fff;
+    background-color:var(--mian-bg);
+    padding: 2rem 0;
+}
+
+.navbar a{
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.navbar-toggler{
+    background-color: grey;
+}
+
+.navbar li a{
+    margin-left: 20px;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color: var(--main-color);
+}
+
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/*main header */
+.main_header_left{
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main_header_left p{
+   font-size:  2rem;
+}
+
+
+.main_header_left h1{
+    font-size:  4rem;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+ }
+
+ .main_header_left .text_color{
+        color: var(--main-color);
+ }
+
+ .main_header_left button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0  8px 6px -6px #000;
+ }
+
+.main_header_left button:hover{
+    box-shadow: 0  8px 6px -6px var(--main-color);
+}
+
+.main_header_right{
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main_header_right figure img{
+  filter: drop-shadow(0 0.5rem 1rem rgba(0,0,0,0.5))        ;
+}
+
+
+
+/*serch tempture */
+.temp_form{
+    width: 60%;
+    position: relative;
+    margin: 3rem auto;
+}
+
+.temp_form input[type="text"]{
+    width: 100%;
+    padding:  2rem 5rem 2rem 2rem;
+    background-color: #1e202b;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+    border-radius: 3rem;
+}
+
+::placeholder{
+    color: #bfc1c8;
+}
+
+
+.temp_form input[type="submit"]{
+    position: absolute;
+    width: 10rem;
+    top: 5px;
+    right:5px;
+    bottom: 5px;
+    border: none;
+    background-color: #009ad8;
+    padding: 0.3rem;
+    border-radius: 3rem;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.temp_form input[type="submit"]:hover{
+    color:#009ad8;
+    background-color: #fff;
+}
+
+
+/* temprature field style */
+
+.main{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.container{
+    width: 400px;
+    height: min-content;
+    background-color: #1e272e;
+    border-radius: 12px;
+    padding: 28px;
+    color: #fff;
+}
+
+.serch-box{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.serch-box input{
+    width: 84%;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: black;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 10px;    
+}
+
+.serch-box input::placeholder{
+  color: #000;
+  margin-right: 12px;
+}
+
+.serch-box button{
+  width: 46px;
+  height: 46px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;  
+  font-size: 20px;
+}
+
+.serch-box button:hover{
+  color: #fff;
+  background-color: #ababab;
+}
+.weather-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin-block:20px ; */
+}
+.img i{
+    font-size: 50px;
+    margin-top: 15px;
+}
+
+.weather-box{
+    /* margin-block: 20px; */
+    text-align: center;
+}
+
+.weather-box .temperature{
+    font-size: 40px;
+    font-weight:800;
+    position: relative;
+}
+
+.weather-box .description{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+
+}
+
+.weather-details
+{
+    width: 100%;
+     display: flex;
+     justify-content: space-between;  
+     margin-top: 20px; 
+}
+
+.temperature{
+    margin-top: 10px;
+}
+
+.wind .humidity
+{
+    display: flex;
+    align-items: center;
+}
+
+.humidity{
+    margin-left: 20px;
+}
+
+.wind{
+    margin-right: 20px;
+}
+
+.weather-details i{
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.weather-details .text{
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.text span{
+ font-size: 16px;
+ font-weight: 700;
+}
+
+
+
+
+
+
+/* footer code */
+footer{
+    width: 100%;
+    background-color: var(--mian-bg);
+    margin-top: auto;
+}
+
+footer p{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 10rem;
+    font-size: 1.4rem;
+}
+
+.errImg{
+    width: 40%;
+    height: 20%;
+    margin-bottom: 22rem;
+}
+
+.AboutImg{
+    height: 450px !important;
+    width: 350px;
+}
+
+.com-text{
+    color: blue;
+}
+
+
+
+/*responsive code */
+@media(max-width:768px)
+{
+    .main_header_left{
+        height: auto;
+        margin: 5rem 0;
+    }
+    .main_header_right{
+        height: auto;
+        margin-top:3rem;
+    }
+}
+
