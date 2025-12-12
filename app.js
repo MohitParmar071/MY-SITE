@@ -1,41 +1,47 @@
 const express = require("express");
 const app = express();
-const path  = require('path');
-const port  = 3000;
+const path = require("path");
 const ejsMate = require("ejs-mate");
 
+// 🔥 Render / Railway / Local — All supported
+const PORT = process.env.PORT || 3000;
 
-app.set("view engine","ejs");
-app.set("views",path.join(__dirname,"views/Templets"));
-app.use(express.static(path.join(__dirname,"public")));
-app.engine("ejs",ejsMate)
+// EJS + ejsMate engine
+app.engine("ejs", ejsMate);
+app.set("view engine", "ejs");
 
+// Correct Views Folder
+app.set("views", path.join(__dirname, "views"));
 
-app.get("/",(req,res)=>{
-  res.render("portfolio")
+// Static Folder
+app.use(express.static(path.join(__dirname, "public")));
+
+// Routes
+app.get("/", (req, res) => {
+  res.render("portfolio");
 });
 
-app.get("/projects",(req,res)=>{
-  res.render("projects")
+app.get("/projects", (req, res) => {
+  res.render("projects");
 });
 
-
-app.get('/home',(req,res)=>{
-    res.render('index');    
+app.get("/home", (req, res) => {
+  res.render("index");
 });
 
-app.get('/about',(req,res)=>{
-    res.render('about');    
+app.get("/about", (req, res) => {
+  res.render("about");
 });
 
-app.get('/weather',(req,res)=>{
-    res.render('weather');    
+app.get("/weather", (req, res) => {
+  res.render("weather");
 });
 
-app.get("/Spotify",(req,res)=>{
-  res.render("Spotify");
-})
+app.get("/spotify", (req, res) => {
+  res.render("spotify");
+});
 
-app.listen(port,()=>{
-  console.log(`App are Loaded in ${port} Port Number`);
-})
+// Start Server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
